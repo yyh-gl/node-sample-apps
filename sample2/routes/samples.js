@@ -28,7 +28,7 @@ router.get('/hello', function(req, res, next) {
 router.get('/hello/:place', function (req, res, next) {
     // var param = {"result":"Hello "+ req.params.place + " !"};                          // ← ★★ 削除 ★★
     var param = {"result":"Hello "+ req.params.place + " !","shop name":req.query.shop};  // ← ★★ 追加 ★★
-    res.header('Content-Type', 'application/json; charset=utf-8')
+    res.header('Content-Type', 'application/json; charset=utf-8');
     res.send(param);
 });
 
